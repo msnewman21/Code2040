@@ -7,7 +7,8 @@ import requests
 def create_token():
 
 github= "https://github.com/msnewman21/Code2040.git"
-info = {'email': adamma.newman@bison.howard.edu, 'github': githubUrl}
+url = "http://challenge.code2040.org/api/register"
+info = {'email': adamma.newman@bison.howard.edu, 'github': github}
 
-final = request.post(github, info)
+final = requests.post(url, info)
 token = json.loads(final.text)["result"]
